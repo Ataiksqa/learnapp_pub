@@ -47,7 +47,7 @@ def auth_user(db, username, password):
 
 @app.get("/health")
 async def health_check():
-    return {"status": "ok", "message": "API is running"}
+    return {"status": "ok", "message": "API is Live and running"}
 
 @app.post("/token",response_model=Token)
 async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
